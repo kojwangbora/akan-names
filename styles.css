@@ -24,4 +24,13 @@ span{
 p{
     padding-top: 1%;
 }
- 
+  
+.btn-formbutton{
+    background-color: rgba(0, 0, 0, 0.486);
+    color: black;
+    border-radius: 25px;
+    padding: 10px 30px;
+    border: none;
+    font-size: 20px;
+
+}
