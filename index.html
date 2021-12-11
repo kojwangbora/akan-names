@@ -58,27 +58,52 @@
         </div>
         <div class="container">
             <h4 class="mb-5 mt-4 text-center position-relative">What is your birth date?</h4>
-            <form>
-                <div class="row">
-                    <div class="col-sm-4">
+            <form novalidate>
+                <div class="row mb-3">
+                    <div class="col-sm-4 g">
                         <label for="day of birth" class="form-label">Day of birth</label>
                         <input id="dayof birth" class="form-control" type="number" placeholder="01" required>
                          <div class="invalid-feedback">
                             valid day is required.  
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <label for="Month of birth" class="form-label">Month of birth</label>
-                        <input id="monthof birth" class="form-control" type="text" placeholder="january" required>
-                         <div class="invalid-feedback">
-                            valid Month is required.  
-                        </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="Month of Birth" class="form-label"> Month of Birth</label>
+                        <select id="Month of birth" class="form-control">
+                            <option value="">choose..</option>
+                            <option value="january">january</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="may">may</option>
+                            <option value="june">June</option>
+                            <option value="july">July</option>
+                            <option value="August">August</option>
+                            <option value="september">september</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                        <div class="invalid-feedback">
+                           valid Year is required.  
+                       </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 mb-3">
                         <label for="year of birth" class="form-label">Year of birth</label>
                         <input id="year of birth" class="form-control" type="number" placeholder="2000" required>
                          <div class="invalid-feedback">
                             valid Year is required.  
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="col-6">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="male" id="male" class="form-check-label">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="female" id="female" class="form-check-label">Female</label>
                         </div>
                     </div>
                     
