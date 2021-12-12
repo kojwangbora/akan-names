@@ -1,6 +1,8 @@
 var button=document.querySelector('#butn');
-
 var CC, YY, DD, d, dayValue, MM;
+var dNames=["Sunday", "Monday", "Teusday", "Wednessday", "Thursday", "Friday", "Saturday"]
+var fNames=["Akosua", "Adwoa", "Abena", "Akua", "Yaa", "Afua","Ama"];
+var mNames=["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "kwame"];
 
 
 function calculateDayvalue() {
@@ -23,7 +25,7 @@ function validate(){
     if(month==null||month>12||month<1){
         alert("valid Month is required")
     }
-    if(year==null|| year<1){
+    if(year==null|| year<1900|| year>2100){
         alert("valid Year is required")
     }
     
