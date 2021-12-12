@@ -1,4 +1,3 @@
-var button=document.querySelector('#butn');
 var CC, YY, DD, d, dayValue, MM;
 var dNames=["Sunday", "Monday", "Teusday", "Wednessday", "Thursday", "Friday", "Saturday"]
 var fNames=["Akosua", "Adwoa", "Abena", "Akua", "Yaa", "Afua","Ama"];
@@ -16,18 +15,34 @@ function calculateDayvalue() {
     return (math.floor(d));
 }
 function validate(){
-    let day=document.getElementById("dayofbirth").value;
-    let month=document.getElementById("Monthofbirth").value;
-    let year=document.getElementById("yearofbirth").value;
-    if(day==null1||day>31||day<1){
-        alert("valid Day is required")
+    var gender=document.getElementsByName("g-nder");
+    if(document.mainForm.yearbirth.value==""|| document.mainForm.yearbirth.length !=4|| document.mainForm.yearbirth.value<-1){
+    alert("A valid year is Required!");
+        document.mainForm.yearbirth.focus() ;
+        return false;
     }
-    if(month==null||month>12||month<1){
-        alert("valid Month is required")
+    else if(document.mainForm.monthbirth.value==""||isNaN(document.mainForm.monthbirth.value )||
+    document.mainForm.monthbirth.value.length!=2 || document.mainForm.monthbirth.value>12 || document.mainForm.monthbirth.value<0){
+        alert("A valid month is required!");
+        document.mainForm.monthbirth.focus();
+        return false;
     }
-    if(year==null|| year<1900|| year>2100){
-        alert("valid Year is required")
+    else if(document.mainForm.date.value==""||isNaN(document.mainForm.date.value )||
+    document.mainForm.date.value.length!=2 || document.mainForm.date.value>31|| document.mainForm.date.value<0){
+        alert("A valid month is required!");
+        document.mainForm.date.focus();
+        return false;
     }
+    else if (gender[0]. checked===false&& gender[1].checked===false){
+        alert("select gender");
+        return false;
+    }
+    else{
+        return true;
+    }
+
+
+     
     
 }
 button.addEventListener('click',()=>{

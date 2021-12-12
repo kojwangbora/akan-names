@@ -58,56 +58,39 @@
         </div>
         <div class="container">
             <h4 class="mb-5 mt-4 text-center position-relative">What is your birth date?</h4>
-            <form novalidate>
+            <form  name="mainForm" onsubmit="validate();">
                 <div class="row mb-3">
                     <div class="col-sm-4 g">
                         <label for="day of birth" class="form-label">Day of birth</label>
-                        <input id="dayofbirth" class="form-control" type="number" placeholder=" eg.01" required>
-                         <div class="invalid-feedback">
-                            valid day is required.  
-                        </div>
+                        <input id="dayofbirth" name="date" class="form-control" type="number" placeholder=" eg.01" required>
+                          
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="Month of Birth" class="form-label"> Month of Birth</label>
-                        <select id="Monthofbirth" class="form-control">
-                            <option value="">choose..</option>
-                            <option value="january">january</option>
-                            <option value="February">February</option>
-                            <option value="March">March</option>
-                            <option value="April">April</option>
-                            <option value="may">may</option>
-                            <option value="june">June</option>
-                            <option value="july">July</option>
-                            <option value="August">August</option>
-                            <option value="september">september</option>
-                            <option value="October">October</option>
-                            <option value="November">November</option>
-                            <option value="December">December</option>
-                        </select>
-                        
+                    <div class="col-sm-4 g">
+                        <label for="day of birth" class="form-label">Month of birth</label>
+                        <input id="dayhofbirth" name="monthbirth" class="form-control" type="number" placeholder=" eg.01" required>
+                          
                     </div>
                     <div class="col-sm-4 mb-3">
-                        <label for="year of birth" class="form-label">Year of birth</label>
-                        <input id="yearofbirth" class="form-control" type="number" placeholder="2000" required>
-                         <div class="invalid-feedback">
-                            valid Year is required.  
-                        </div>
+                        <label for="year of birth" class="form-label">year of birth</label>
+                        <input id="yearofbirth" class="form-control" name="yearbirth" type="number" placeholder="2000" required>
+                        
                     </div>
                     
                     <div class="col-6">
+                        <label class="form-check pb-2">Gender</label>
                         <div class="form-check">
-                            <input type="radio" class="form-check-input required">
-                            <label for="male" id="male" class="form-check-label">Male</label>
+                            <input type="radio"  id="m" name=g-nder class="form-check-input required">
+                            <label class="form-check-label">Male</label>
                         </div>
                         <div class="form-check">
-                            <input type="radio" class="form-check-input" required>
-                            <label for="female" id="female" class="form-check-label">Female</label>
+                            <input type="radio" id="f" name="g-nder" class="form-check-input" required>
+                            <label class="form-check-label">Female</label>
                         </div>
                     </div>
                     <hr class= "break my-4 ">
                     <div class="text-center ">
                         <button id="butn" type="button" class="btn-formbutton  bi bi-chevron-right" onclick="finDname();">
-                        Your Name Is :</button>
+                        Your Name</button>
                         
                     </div>
                     
@@ -141,7 +124,7 @@
 
 
 
-    <script src="javascript/script.js"></script>
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
