@@ -40,14 +40,68 @@ function validate(){
     else{
         return true;
     }
-
-
-     
     
 }
-button.addEventListener('click',()=>{
-    getName();
-    validate()
-    let results=document.querySelector('#results');
-    
-})
+function findGender(){
+    var gender= document.getElementsByName("g-nder");
+    if(gender[0].checked===true){
+        var gender="female";
+    }
+    else{
+        return false;
+    }
+    switch(gender){
+        case"female":
+        if(dayValue== 1){
+        alert("Akan name is " +fNames[0]+ "!"+ "and your born day is" +dNames[0]);
+        }
+        else if(dayValue==2){
+            alert("Akan name is " +fNames[1]+ "!"+ "and your born day is" +dNames[1]);
+        }
+        else if(dayValue==3){
+            alert("Akan name is " +fNames[2]+ "!"+ "and your born day is" +dNames[2]);
+        }
+        else if(dayValue==4){
+            alert("Akan name is " +fNames[3]+ "!"+ "and your born day is" +dNames[3]);
+        }
+        else if(dayValue==5){
+            alert("Akan name is " +fNames[4]+ "!"+ "and your born day is" +dNames[4]);
+        }
+        else if(dayValue==6){
+            alert("Akan name is " +fNames[5]+ "!"+ "and your born day is" +dNames[5]);
+        }
+        else if(dayValue==-0){
+            alert("Akan name is " +fNames[6]+ "!"+ "and your born day is" +dNames[6]);
+        }
+        break;
+        case"male":
+        if(dayValue== 1){
+        alert("Akan name is " +fNames[0]+ "!"+ "and your born day is" +dNames[0]);
+        }
+        else if(dayValue==2){
+            alert("Akan name is " +fNames[1]+ "!"+ "and your born day is" +dNames[1]);
+        }
+        else if(dayValue==3){
+            alert("Akan name is " +fNames[2]+ "!"+ "and your born day is" +dNames[2]);
+        }
+        else if(dayValue==4){
+            alert("Akan name is " +fNames[3]+ "!"+ "and your born day is" +dNames[3]);
+        }
+        else if(dayValue==5){
+            alert("Akan name is " +fNames[4]+ "!"+ "and your born day is" +dNames[4]);
+        }
+        else if(dayValue==6){
+            alert("Akan name is " +fNames[5]+ "!"+ "and your born day is" +dNames[5]);
+        }
+        else if(dayValue==-0){
+            alert("Akan name is " +fNames[6]+ "!"+ "and your born day is" +dNames[6]);
+        }
+        break
+        default:
+
+    }
+}
+ function findName(){
+     dayValue=calculateDayvalue();
+     getGender();
+ }
