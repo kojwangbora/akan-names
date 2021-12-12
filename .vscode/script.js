@@ -17,4 +17,20 @@ function validate(){
     let day=document.getElementById("dayofbirth").value;
     let month=document.getElementById("Monthofbirth").value;
     let year=document.getElementById("yearofbirth").value;
+    if(day==null1||day>31||day<1){
+        alert("valid Day is required")
+    }
+    if(month==null||month>12||month<1){
+        alert("valid Month is required")
+    }
+    if(year==null|| year<1){
+        alert("valid Year is required")
+    }
+    
 }
+button.addEventListener('click',()=>{
+    getName();
+    validate()
+    let results=document.querySelector('#results');
+    
+})
