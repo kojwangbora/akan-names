@@ -1,5 +1,5 @@
 var CC, YY, DD, d, dayValue, MM;
-var dNames=["Sunday", "Monday", "Teusday", "Wednessday", "Thursday", "Friday", "Saturday"]
+var dNames=["Sunday", "Monday", "Teusday", "Wednessday", "Thursday", "Friday", "Saturday"];
 var fNames=["Akosua", "Adwoa", "Abena", "Akua", "Yaa", "Afua","Ama"];
 var mNames=["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "kwame"];
 
@@ -16,7 +16,7 @@ function calculateDayvalue() {
 }
 function validate(){
     var gender=document.getElementsByName("g-nder");
-    if(document.mainForm.yearbirth.value==""|| document.mainForm.yearbirth.length !=4|| document.mainForm.yearbirth.value<-1){
+    if(document.mainForm.yearbirth.value==""|| document.mainForm.yearbirth.length !=4|| document.mainForm.yearbirth.value<=1799||document.mainForm.yearbirth.value>2099){
     alert("A valid year is Required!");
         document.mainForm.yearbirth.focus() ;
         return false;
@@ -33,7 +33,7 @@ function validate(){
         document.mainForm.date.focus();
         return false;
     }
-    else if (gender[0]. checked===false&& gender[1].checked===false){
+    else if (gender[0]. checked==false&& gender[1].checked==false){
         alert("select gender");
         return false;
     }
@@ -44,7 +44,7 @@ function validate(){
 }
 function findGender(){
     var gender= document.getElementsByName("g-nder");
-    if(gender[0].checked===true){
+    if(gender[0].checked==true){
         var gender="female";
     }
     else{
@@ -101,7 +101,7 @@ function findGender(){
 
     }
 }
- function findName(){
+ function finDname(){
      dayValue=calculateDayvalue();
      getGender();
  }
