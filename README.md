@@ -2,6 +2,7 @@
 This project is a web application that takes a user's birthday and calculates the day of the week they were born and then depending on their gender outputs their Akan Name. 
 ## Date of current version
 13/12/2021
+ 
 ## Authors
 Developed by Kojwang E.B Ochieng
 ## Description
