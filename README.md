@@ -11,16 +11,16 @@ Developed by Kojwang E.B Ochieng
 * a phone/computer/tablet/ipad
 * An internet
 ## Installation Process
-*Git clone
-*cd akan_names
-*open using your VisualStudio code or Atom (preferably VS code)
+* Git clone
+* cd akan_names
+* open using your VisualStudio code or Atom (preferably VS code)
 ## Known Bugs
 no known bugs
 ## Technologies Used
- *HTML-for structuring the pages
- *CSS- used for styling the pages
- *JavaScript
- *Bootstrap
+ * HTML-for structuring the pages
+ * CSS- used for styling the pages
+ * JavaScript
+ * Bootstrap
 ## Support and contact details
 *Reach me through email: kojwangbora254@gmail.com or contact +254792274743
 ### License
