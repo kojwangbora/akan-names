@@ -11,7 +11,7 @@ function validate() {
      return false;
   }
   else if( document.myForm.month.value == "" || isNaN( document.myForm.month.value ) || 
-  document.myForm.month.value.length != 2 || document.myForm.month.value > 12  || document.myForm.month.value <= 0){
+  document.myForm.month.value.length != 2 || document.myForm.month.value > 12  || document.myForm.month.value <= 1){
      alert( "Enter valid month of birth!" );
      document.myForm.month.focus() ;
      return false;
