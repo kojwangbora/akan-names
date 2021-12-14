@@ -58,20 +58,20 @@
         </div>
         <div class="container">
             <h4 class="mb-5 mt-4 text-center position-relative">What is your birth date?</h4>
-            <form name="myForm" class="form" onsubmit="validate();">
+            <form name="mainForm" class="form" onsubmit="validate();">
                 <div class="row mb-3">
                     <div class="col-sm-4 mb-3">
                         <label for="number" class="form-label">Year of birth</label>
-                        <input type="number" class="form-control" id="year" name="year" placeholder="e.g 2020" required>
+                        <input type="number" class="form-control" id="yr" name="year" placeholder="e.g 2020" required>
                     </div>
                     <div class="col-sm-4 g">
-                        <label for="moth of birth" class="form-label">Month of birth</label>
-                        <input type="number" class="form-control"  id="month" name="month" placeholder=" eg.01" required>
+                        <label for="month of birth" class="form-label">Month of birth</label>
+                        <input type="number" class="form-control"  id="mnth" name="month" placeholder=" eg.01" required>
                           
                     </div>
                     <div class="col-sm-4 g">
                         <label for="day of birth" class="form-label">Day of birth</label>
-                        <input type="number" class="form-control" id="date" name="date"  placeholder=" eg.01" required>
+                        <input type="number" class="form-control" id="dt" name="date"  placeholder=" eg.01" required>
                           
                     </div>
                                        
@@ -79,14 +79,14 @@
                         <label class="form-check pb-2">Gender</label>
                         <div class="form-check">
                             <label class="form-check-label" for="male">Male</label>
-                            <input type="radio" class="form-check-input"  name="gender" id="male" required>
+                            <input type="radio" class="form-check-input"  name="mfnames" id="male" required>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label" for="female">Female</label>
-                            <input type="radio" class="form-check-input" id="female" name="gender" required>
+                            <input type="radio" class="form-check-input" id="female" name="mfnames" required>
                         </div>
                         <div class="text-start mt-3 mb-3 bg ">
-                            <button type="submit" class="btn btn-secondary" onclick="findName();">Your Name is:</button>
+                            <button type="submit" class="btn btn-secondary" onclick="nameCheckout();">Your Name is:</button>
                         </div>
                     </div>
                    <hr class= "break my-4 ">
