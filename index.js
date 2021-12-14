@@ -1,3 +1,10 @@
+// declaration of variables
+
+var CC, YY, MM, DD, d, dayValue;
+var dayNames = ["Sunday","Monday","Tuesday","Wednesday", "Thursday", "Friday","Saturday" ];
+var mNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
+var fNames = ["Akosua","Adwoa","Abenaa","Akua"," Yaa","Afua","Ama"];
+
 
 // getting the day (d) value where the value ranges from (0-6)
 function calculateDayValue(){
@@ -10,16 +17,39 @@ function calculateDayValue(){
   console.log(d);
   return (Math.floor(d));
 }
-
-// declaration of variables
-
-var CC, YY, MM, DD, d, dayValue;
-var dayNames = ["Sunday","Monday","Tuesday","Wednesday", "Thursday", "Friday","Saturday" ];
-var mNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
-var fNames = ["Akosua","Adwoa","Abenaa","Akua"," Yaa","Afua","Ama"];
-
-// finding the gender and asigning the akan names based on the days
-// ie, Sunday=0, monday=1, teusday=2, wednessday=3 etc...
+// validation of the form's entry boxes (year, date month)
+function validate() {
+  var genders = document.getElementsByName("mfnames");
+  if( document.mainForm.year.value.length !=4 
+    || document.mainForm.year.value <=1) {
+     alert( "Enter valid year of birth!" );
+     document.myForm.year.focus() ;
+     return false;
+  }
+  else if( document.mainForm.month.value.length != 2 
+    || document.mainForm.month.value > 12  
+    || document.mainForm.month.value < 1){
+     alert( "Enter valid month of birth!" );
+     document.mainForm.month.focus() ;
+     return false;
+  }
+  else if( document.mainForm.date.value.length != 2
+    || isNaN( document.mainForm.date.value ) 
+    || document.mainForm.date.value > 31
+    || document.mainForm.date.value <= 0) {
+     alert( "Enter valid day of birth!" );
+     document.mainForm.date.focus() ;
+     return false;
+  }
+  else if(genders[0].checked==false && genders[1].checked==false ) {
+      alert("select male or female");
+      return false;
+  }   
+  else{
+    return true ;
+  }
+  
+}
 
 function findGender(){
   var genders = document.getElementsByName("mfnames");
@@ -81,44 +111,6 @@ function findGender(){
     default:
           
   }
-// validation of the form's entry boxes (year, date month)
-function validate() {
-  var genders = document.getElementsByName("mfnames");
-  if( document.mainForm.year.value.length !=4 
-    || document.mainForm.year.value <=1) {
-     alert( "Enter valid year of birth!" );
-     document.myForm.year.focus() ;
-     return false;
-  }
-  else if( document.mainForm.month.value.length != 2 
-    || document.mainForm.month.value > 12  
-    || document.mainForm.month.value <= 1){
-     alert( "Enter valid month of birth!" );
-     document.mainForm.month.focus() ;
-     return false;
-  }
-  else if( document.mainForm.date.value.length != 2
-    || isNaN( document.mainForm.date.value ) 
-    || document.mainForm.date.value > 31
-    || document.mainForm.date.value<=0) {
-     alert( "Enter valid day of birth!" );
-     document.mainForm.date.focus() ;
-     return false;
-  }
-  else if(genders[0].checked==false && genders[1].checked==false ) {
-      alert("select male or female");
-      return false;
-  }   
-  else{
-    return true ;
-  }
-  
-}
-
-
-
-
-
 
 
 }
